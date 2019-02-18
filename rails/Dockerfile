@@ -1,11 +1,12 @@
-FROM rails:latest
+FROM ruby:2.4.0
+
+ENV LANG C.UTF-8
 
 
 MAINTAINER YUKI HORITA <y-horita-42t@eagle.sophia.ac.jp>
 
 RUN set -x && \
     apt-get -y update && \
-    apt-get -y upgrade && \
     apt-get install -y postgresql && \
     gem install bootstrap && \
     apt-get install -y vim && \

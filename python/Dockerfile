@@ -12,10 +12,12 @@ RUN set -x && \
     apt-get install -y vim && \
     mkdir ~/.vim &&\
     mkdir ~/.vim/rc &&\
+    mkdir ~/.vim/colors &&\
+    #.vimrcをダウンロード
     wget https://raw.githubusercontent.com/yuki-trans-am/vim/master/.vimrc -P /root/ &&\
     wget https://raw.githubusercontent.com/yuki-trans-am/vim/master/dein.toml -P /root/.vim/rc &&\
-    wget https://raw.githubusercontent.com/yuki-trans-am/vim/master/dein_lazy.toml -P /root/.vim/rc
-
+    wget https://raw.githubusercontent.com/yuki-trans-am/vim/master/dein_lazy.toml -P /root/.vim/rc &&\
+    wget https://raw.githubusercontent.com/freeo/vim-kalisi/master/colors/kalisi.vim -P /root/.vim/colors
 
 RUN pip install pandas\
                 schedule\
